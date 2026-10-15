@@ -233,9 +233,9 @@ reduce parameters, but this model deliberately keeps the two roles explicit.
 
 For a vector $x \in \mathbb{R}^{D}$:
 
-$$\operatorname{RMS}(x) = \sqrt{\frac{1}{D}\sum_{i=1}^{D}x_i^2 + \epsilon}$$
+$$\mathrm{RMS}(x) = \sqrt{\frac{1}{D}\sum_{i=1}^{D}x_i^2 + \epsilon}$$
 
-$$\operatorname{RMSNorm}(x) = g \odot \frac{x}{\operatorname{RMS}(x)}$$
+$$\mathrm{RMSNorm}(x) = g \odot \frac{x}{\mathrm{RMS}(x)}$$
 
 where $g \in \mathbb{R}^{D}$ is a learned scale initialized to ones.
 
@@ -257,12 +257,12 @@ sensitive reductions in FP32.
 
 SiLU is:
 
-$$\operatorname{SiLU}(x) = x\,\sigma(x)$$
+$$\mathrm{SiLU}(x) = x\,\sigma(x)$$
 
 SwiGLU uses two parallel projections with the same shape:
 
-$$\operatorname{SwiGLU}(x)
-= W_2\left(\operatorname{SiLU}(W_1x) \odot W_3x\right)$$
+$$\mathrm{SwiGLU}(x)
+= W_2\left(\mathrm{SiLU}(W_1x) \odot W_3x\right)$$
 
 ```text
 x                    (..., D)
@@ -276,8 +276,8 @@ projection returns to the residual-stream width.
 
 ## 7. Scaled dot-product attention
 
-$$\operatorname{Attention}(Q,K,V)
-= \operatorname{softmax}\left(\frac{QK^T}{\sqrt{D_h}} + M\right)V$$
+$$\mathrm{Attention}(Q,K,V)
+= \mathrm{softmax}\left(\frac{QK^T}{\sqrt{D_h}} + M\right)V$$
 
 For every head:
 
@@ -298,7 +298,7 @@ distribution over all keys it may read.
 
 ### Stable softmax
 
-$$\operatorname{softmax}(x)_i
+$$\mathrm{softmax}(x)_i
 = \frac{e^{x_i-m}}{\sum_j e^{x_j-m}},\qquad m=\max_j x_j$$
 
 Subtracting the maximum changes neither the probabilities nor their ordering,
@@ -417,9 +417,9 @@ activation dtype only when applied.
 
 The two pre-norm residual updates are:
 
-$$z = x + \operatorname{MHA}(\operatorname{RMSNorm}_1(x))$$
+$$z = x + \mathrm{MHA}(\mathrm{RMSNorm}_1(x))$$
 
-$$y = z + \operatorname{SwiGLU}(\operatorname{RMSNorm}_2(z))$$
+$$y = z + \mathrm{SwiGLU}(\mathrm{RMSNorm}_2(z))$$
 
 Important details:
 
@@ -432,7 +432,7 @@ Important details:
 
 After all blocks:
 
-$$\text{logits} = W_{vocab}\operatorname{RMSNorm}(x)$$
+$$\text{logits} = W_{vocab}\mathrm{RMSNorm}(x)$$
 
 ```text
 hidden states: (B, T, D)
@@ -487,7 +487,7 @@ Then average the per-token loss.
 
 Perplexity is:
 
-$$\operatorname{PPL} = e^{\text{cross-entropy}}$$
+$$\mathrm{PPL} = e^{\text{cross-entropy}}$$
 
 Lower validation loss and perplexity are better. Compare models using the same
 tokenizer and evaluation data.
