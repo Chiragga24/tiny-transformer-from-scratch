@@ -1,16 +1,14 @@
 # Transformer Language Model from Scratch
 
-This is a from-scratch language-modeling project built while studying Stanford
-CS336. It implements a small decoder-only Transformer and the supporting
-training pipeline in PyTorch, then studies what can be trained on an RTX 4050
-laptop GPU.
+This is a from-scratch language-modeling project that implements a small
+decoder-only Transformer and its supporting training pipeline in PyTorch, then
+studies what can be trained on an RTX 4050 laptop GPU.
 
 The project is not a pretrained-model fine-tuning exercise. The tokenizer,
 model layers, optimizer, loss, batching, checkpointing, training loop, and text
 generation path are implemented in this repository.
 
-> This is an independent learning project, not a course submission. I am not
-> enrolled in Stanford CS336.
+> This is an independent learning and experimentation project.
 
 ## What is implemented
 
@@ -188,11 +186,11 @@ by Git. The summary figures under `docs/figures/` are intentionally tracked.
 
 | Path | Purpose |
 |---|---|
-| `cs336_basics/model.py` | Transformer layers and complete language model |
-| `cs336_basics/tokenizer.py` | Byte-level BPE tokenizer |
-| `cs336_basics/bpe.py` | BPE training |
-| `cs336_basics/optimizer.py` | AdamW and cosine schedule |
-| `cs336_basics/nn_utils.py` | Cross-entropy and gradient clipping |
+| `tiny_transformer/model.py` | Transformer layers and complete language model |
+| `tiny_transformer/tokenizer.py` | Byte-level BPE tokenizer |
+| `tiny_transformer/bpe.py` | BPE training |
+| `tiny_transformer/optimizer.py` | AdamW and cosine schedule |
+| `tiny_transformer/nn_utils.py` | Cross-entropy and gradient clipping |
 | `scripts/prepare_tinystories.py` | Tokenizer training and streaming corpus encoding |
 | `scripts/train_tinystories.py` | Training, evaluation, logging, and checkpointing |
 | `scripts/evaluate_tinystories.py` | Deterministic full-validation evaluation |
@@ -200,10 +198,6 @@ by Git. The summary figures under `docs/figures/` are intentionally tracked.
 | `scripts/benchmark_gpu.py` | Guarded BF16 GPU benchmark |
 | `scripts/make_github_figures.py` | Rebuilds the tracked summary figures |
 
-## Attribution
+## License
 
-This project was inspired by Stanford CS336 and began from its language-model
-basics starter code. The original course materials and starter structure belong
-to their respective authors. My additions are the implementations, Windows
-compatibility work, laptop workflow, experiment scripts, measurements, and
-analysis shown here.
+This repository is distributed under the included MIT license.

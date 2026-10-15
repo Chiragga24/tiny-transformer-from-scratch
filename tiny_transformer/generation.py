@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import torch
 
-from cs336_basics.model import TransformerLM
+from tiny_transformer.model import TransformerLM
 
 
 @torch.no_grad()

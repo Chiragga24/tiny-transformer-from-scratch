@@ -5,7 +5,7 @@ from collections import Counter, defaultdict
 
 import regex
 
-from cs336_basics.tokenizer import PRETOKEN_PATTERN
+from tiny_transformer.tokenizer import PRETOKEN_PATTERN
 
 
 def _adjacent_pair_counts(pieces: tuple[bytes, ...]) -> Counter[tuple[bytes, bytes]]:

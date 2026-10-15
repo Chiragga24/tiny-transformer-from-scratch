@@ -8,9 +8,9 @@ from typing import Protocol
 
 import numpy as np
 
-from cs336_basics.bpe import train_bpe
-from cs336_basics.tokenizer import PRETOKEN_PATTERN, Tokenizer
-from cs336_basics.tokenizer_io import load_tokenizer, save_tokenizer
+from tiny_transformer.bpe import train_bpe
+from tiny_transformer.tokenizer import PRETOKEN_PATTERN, Tokenizer
+from tiny_transformer.tokenizer_io import load_tokenizer, save_tokenizer
 
 
 END_OF_TEXT = "<|endoftext|>"

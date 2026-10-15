@@ -4,7 +4,7 @@ import base64
 import json
 import os
 
-from cs336_basics.tokenizer import Tokenizer
+from tiny_transformer.tokenizer import Tokenizer
 
 
 def _bytes_to_text(value: bytes) -> str:

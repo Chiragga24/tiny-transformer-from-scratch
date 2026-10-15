@@ -9,9 +9,9 @@ from pathlib import Path
 
 import torch
 
-from cs336_basics.model import TransformerLM
-from cs336_basics.nn_utils import cross_entropy
-from cs336_basics.optimizer import AdamW
+from tiny_transformer.model import TransformerLM
+from tiny_transformer.nn_utils import cross_entropy
+from tiny_transformer.optimizer import AdamW
 
 
 MIB = 1024**2

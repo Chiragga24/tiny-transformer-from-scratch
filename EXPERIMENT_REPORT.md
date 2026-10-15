@@ -2,9 +2,9 @@
 
 ## 1. Purpose
 
-The project began as a way to learn the language-model foundations covered in
-Stanford CS336 by implementing the stack rather than calling a pretrained
-Hugging Face model. It then grew into a laptop-scale study of model size, data size, compute
+The project began as a way to learn language-model foundations by implementing
+the stack rather than calling a pretrained Hugging Face model. It then grew into
+a laptop-scale study of model size, data size, compute
 allocation, optimizer settings, validation noise, memory limits, and generation
 quality.
 

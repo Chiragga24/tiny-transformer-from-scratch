@@ -10,11 +10,11 @@ import numpy as np
 import torch
 from tqdm.auto import tqdm
 
-from cs336_basics.data import get_batch
-from cs336_basics.model import TransformerLM
-from cs336_basics.nn_utils import clip_gradients, cross_entropy
-from cs336_basics.optimizer import AdamW, get_lr_cosine_schedule
-from cs336_basics.serialization import load_checkpoint, save_checkpoint
+from tiny_transformer.data import get_batch
+from tiny_transformer.model import TransformerLM
+from tiny_transformer.nn_utils import clip_gradients, cross_entropy
+from tiny_transformer.optimizer import AdamW, get_lr_cosine_schedule
+from tiny_transformer.serialization import load_checkpoint, save_checkpoint
 
 
 def parse_args() -> argparse.Namespace:

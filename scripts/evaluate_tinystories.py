@@ -9,8 +9,8 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from cs336_basics.model import TransformerLM
-from cs336_basics.nn_utils import cross_entropy
+from tiny_transformer.model import TransformerLM
+from tiny_transformer.nn_utils import cross_entropy
 
 
 def parse_args() -> argparse.Namespace:

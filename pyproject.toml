@@ -27,7 +27,7 @@ requires = ["uv_build>=0.11.0,<0.12.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = "cs336_basics"
+module-name = "tiny_transformer"
 module-root = ""
 
 [tool.uv]

@@ -9,9 +9,9 @@ import torch
 from jaxtyping import Bool, Float, Int
 from torch import Tensor
 
-from cs336_basics.bpe import train_bpe
-from cs336_basics.data import get_batch
-from cs336_basics.model import (
+from tiny_transformer.bpe import train_bpe
+from tiny_transformer.data import get_batch
+from tiny_transformer.model import (
     Embedding,
     Linear,
     MultiHeadSelfAttention,
@@ -24,10 +24,10 @@ from cs336_basics.model import (
     silu,
     softmax,
 )
-from cs336_basics.nn_utils import clip_gradients, cross_entropy
-from cs336_basics.optimizer import AdamW, get_lr_cosine_schedule
-from cs336_basics.serialization import load_checkpoint, save_checkpoint
-from cs336_basics.tokenizer import Tokenizer
+from tiny_transformer.nn_utils import clip_gradients, cross_entropy
+from tiny_transformer.optimizer import AdamW, get_lr_cosine_schedule
+from tiny_transformer.serialization import load_checkpoint, save_checkpoint
+from tiny_transformer.tokenizer import Tokenizer
 
 
 def run_linear(

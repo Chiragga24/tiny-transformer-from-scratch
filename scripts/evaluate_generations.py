@@ -9,10 +9,10 @@ from pathlib import Path
 
 import torch
 
-from cs336_basics.generation import generate_token_ids
-from cs336_basics.model import TransformerLM
-from cs336_basics.tokenizer import Tokenizer
-from cs336_basics.tokenizer_io import load_tokenizer
+from tiny_transformer.generation import generate_token_ids
+from tiny_transformer.model import TransformerLM
+from tiny_transformer.tokenizer import Tokenizer
+from tiny_transformer.tokenizer_io import load_tokenizer
 
 
 DEFAULT_CHECKPOINTS = {
