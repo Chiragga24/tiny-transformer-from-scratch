@@ -152,7 +152,7 @@ def make_fast_encoder(tokenizer: Tokenizer) -> TextEncoder:
         if token_id not in special_ids
     }
     encoder = tiktoken.Encoding(
-        name="cs336_tinystories",
+        name="tiny_transformer_tinystories",
         pat_str=PRETOKEN_PATTERN.pattern,
         mergeable_ranks=mergeable_ranks,
         special_tokens=tokenizer.special_to_id,

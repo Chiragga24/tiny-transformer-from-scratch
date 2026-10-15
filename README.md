@@ -10,6 +10,9 @@ generation path are implemented in this repository.
 
 > This is an independent learning and experimentation project.
 
+For a detailed, code-oriented explanation of the complete pipeline, see the
+[Tiny Transformer Implementation Guide](IMPLEMENTATION_GUIDE.md).
+
 ## What is implemented
 
 - byte-level BPE training and tokenization, including special tokens;
@@ -186,6 +189,7 @@ by Git. The summary figures under `docs/figures/` are intentionally tracked.
 
 | Path | Purpose |
 |---|---|
+| `IMPLEMENTATION_GUIDE.md` | Detailed explanation of the code, equations, shapes, and workflow |
 | `tiny_transformer/model.py` | Transformer layers and complete language model |
 | `tiny_transformer/tokenizer.py` | Byte-level BPE tokenizer |
 | `tiny_transformer/bpe.py` | BPE training |
